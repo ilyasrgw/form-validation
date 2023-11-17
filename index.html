@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form Validation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d70494dddf.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">  
+        <form id="form">
+        <div class="social">
+        <div class="title">Get Started</div>
+        <div class="question">
+            Already Have an Account? <br>
+            <br>
+            <span>Sign In</span>
+            <br>
+            </div>
+        <div class="btn">
+            <div class="btn-1">
+        <img width="30" height="30" src="https://img.icons8.com/color/48/google-logo.png" alt="google-logo">
+                sign up
+            </div>
+            <div class="btn-2">
+                <img width="30" height="30" src="https://img.icons8.com/color/30/facebook.png" alt="facebook">
+                sign up
+            </div>
+        </div>
+        <div class="or">Or</div>
+
+        </div>
+
+            <div>
+                <label for="username">User Name</label>
+                <i class="fa-regular fa-user"></i>
+                <input type="text" name="username" id="username" placeholder="Ilya Sergeev">
+                <i class="fa-solid fa-bolt failure-icon"></i>
+                <i class="fa-solid fa-check success-icon"></i>
+                <div class="error"></div>
+            </div>
+
+             
+            <div><label for="email">Email</label>
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="ilya.srgw@gmail.com">
+                <i class="fa-solid fa-bolt failure-icon"></i>
+                <i class="fa-solid fa-check success-icon"></i>
+                <div class="error"></div></div>
+
+             
+            <div><label for="password">Password</label>
+                <i class="fa-regular fa-eye" id="eye" onclick="toggle()"></i>
+                
+                <input type="password" name="password" id="password" placeholder="Enter your password here">
+                <i class="fa-solid fa-bolt failure-icon"></i>
+                <i class="fa-solid fa-check success-icon"></i>
+                <div class="error"></div></div>
+                <script>
+                    let state = false;
+                    toggle = () =>{ 
+                    if(state) {
+                        document.getElementById("password").setAttribute("type","password");
+                        document.getElementById("eye").style.color='#7a797e';
+                        state = false;
+                    } else {document.getElementById("password").setAttribute("type","text");
+                    document.getElementById("eye").style.color='#5887ef';
+                        state = true;
+
+                    }
+                    }
+                </script>
+
+                <button type="submit" id="submit">Submit</button>
+        </form>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
